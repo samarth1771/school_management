@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schools</title>
+</head>
+<body>
+<h1>Schools</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Area</th>
+    </tr>
+    </thead>
+
+    {% for school in schools %}
+    <tr>
+        <td>{{ school.name }}</td>
+        <td>{{ school.city }}</td>
+        <td>{{ school.area }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--# Load static directory-->
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+<body>
+<h1 align="center"><span class="badge badge-secondary">LOGIN</span></h1>
+    <form class="form-group" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-sm-3"></div>
+                <div class="col-md-6">
+                    <label class="label label-default" for="username">User Name</label>
+                    <input class="form-control" type="text" id="username" name="username" required><br/><br/>
+                </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+                <div class="col-md-6">
+                    <label class="label label-default" for="password">Password</label>
+                    <input class="form-control" type="password" id="password" name="password" required><br/><br/>
+                </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+                <div class="col-md-6">
+                    <input class="btn btn-primary" type="submit" value="Login">
+                </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+
+    </form>
+
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+
+   </body>
+</html>
